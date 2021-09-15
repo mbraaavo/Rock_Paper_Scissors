@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@400;600&display=swap');
+
+
 * {
     margin: 0;
-    padding: 5px;
+    padding: 0;
 }
 
 body {
@@ -9,21 +12,81 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    background-color: #F4A261;
+    font-family: 'Glory', sans-serif;
+    font-size: 1.2rem;
+}
+
+body .Hero  {
+    margin-top: 12px;
+    background-color: #E9C46A;
+    padding: 40px;
+    color: #E76F51;
+    border: 9px dashed rgba(42,157,143,0.73);
+    box-shadow: 3px 6px 6px -1px rgba(0,0,0,0.63);
+
 }
 
 .main {
     height: 20vh;
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    background-color: #2A9D8F;
+    padding: 80px 50px;
+    border: 5px dashed rgba(38,70,83,0.73);
+    box-shadow: 3px 6px 6px -1px rgba(0,0,0,0.63)
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin: 15px 10px;
+    border: 2px solid #264653;
+    padding: 4px;
+}
+
+.user_icon {
+    cursor: pointer;
+
+}
+
+.user_icon:hover {
+    transition: .1;
+    border: 2px solid #E9C46A;
+    transform: scale(1.2);
+}
+
+.card h2 {
+    margin-bottom: 10px;
 }
 
 .scoreboard {
     display: flex;
     padding: 20px;
     width: 50vw;
-    height: 22vh;
+    height: 15vh;
     justify-content: space-between;
+    background-color: #264653;
+    margin-bottom: 12px;
+    border: 5px dashed #E76F51; 
+    box-shadow: 3px 6px 6px -1px rgba(0,0,0,0.63)
 }
 
 .scoreboard .score_card {
     margin: 15px;
+}
+
+.score {
+    font-size: 2.2rem;
+    color: #E9C46A;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
 }
