@@ -63,12 +63,62 @@ body .Hero  {
     transform: scale(1.2);
 }
 
+.p1_choice_box {
+    display: flex;
+    justify-content: end;
+}
+
 .p1_choice {
-    display: none;
+    visibility: hidden;
+}
+
+.play_button_sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.WINorLose {
+    font-size: 2rem;
+}
+
+.win {
+    color: #E9C46A;
+}
+
+.lose {
+    color: #DD1C1A;
+}
+
+.tie {
+    color: #264653;
+}
+
+.button_box {
+    display: flex;
+    justify-content: center;
+}
+
+#play_btn {
+    height: 40px;
+    width: 60px;
+    background-color: #E9C46A;
+    border: none;
+    font-family: 'Glory', sans-serif;
+    font-size: 1.2rem;
+}
+
+#play_btn:hover {
+    transform: scale(1.2);
+    border: 2px solid #F4A261;
+    box-shadow: 0 0 10px #F4A261;
 }
 
 .pc_choice {
-    display: none;
+    visibility: hidden;
 }
 
 .card h2 {
