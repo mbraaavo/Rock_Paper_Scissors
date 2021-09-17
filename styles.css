@@ -80,7 +80,7 @@ body .Hero  {
     height: 25vh;
     align-items: center;
     flex-wrap: wrap;
-    width: 15vw;
+    width: 17vw;
 }
 
 .win {
@@ -104,6 +104,7 @@ body .Hero  {
     flex-direction: column;
     align-items: center;
 }
+
 
 #play_btn {
     height: 40px;
@@ -154,4 +155,8 @@ body .Hero  {
     display: flex;
     justify-content: center;
     margin-top: 2px;
+}
+
+.Winner_Announce {
+    text-align: center;
 }

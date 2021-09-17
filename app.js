@@ -14,7 +14,7 @@ let win_lose = document.querySelector('.WINorLOSE');
 let guide = document.querySelector('.guide');
 let p1_score = document.querySelector('#ur_score');
 let pc_score = document.querySelector('#pc_score');
-
+let announcement = document.querySelector('.announecment');
 
 //This will populate the user's choice and activate the "play" button
 rock.addEventListener("click", () => {
@@ -139,3 +139,17 @@ play_button.addEventListener("click", () => {
     guide.innerHTML = "Play or Choose Again!";
     score_counter();
 });
+
+//This will be the winner announcment! I'm doing best out of 5
+
+console.log(p1_score_number);
+console.log(pc_score_number);
+
+if (pc_score == "3" || p1_score == "3") {
+    if (pc_score_number = "3") {
+        announecment.innerHTML = "SORRY!! <br> PC WON..";
+    }
+    else {
+        announcement.innerHTML= "CONGRATS!! <br> YOU WON!!";
+    }
+};
