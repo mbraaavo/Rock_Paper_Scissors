@@ -1,5 +1,4 @@
-//This will fill in the users choice spot...
-
+//Grabbing some elements from the DOM
 let rock = document.querySelector('#rock');
 let paper = document.querySelector('#paper');
 let scissors = document.querySelector('#scissors');
@@ -9,28 +8,41 @@ let play_button = document.querySelector('#play_btn');
 let rock_pic = "misc/svg/003-stone.svg";
 let paper_pic = "misc/svg/002-file.svg";
 let scissors_pic = "misc/svg/001-scissors.svg";
-let p1_var 
+let p1_var = ""
 let pc_var
 let win_lose = document.querySelector('.WINorLOSE');
+let guide = document.querySelector('.guide');
+let p1_score = document.querySelector('#ur_score');
+let pc_score = document.querySelector('#pc_score');
 
-rock.addEventListener("click", function() {
+
+//This will populate the user's choice and activate the "play" button
+rock.addEventListener("click", () => {
     p1_choice.src = rock_pic;
     p1_choice.style.visibility = "visible";
     p1_var = "rock";
+    play_button.style.pointerEvents = "auto";
+    play_button.style.backgroundColor = "#F4A261";
 });
 
-paper.addEventListener("click", function() {
+paper.addEventListener("click", () => {
     p1_choice.src = paper_pic;
     p1_choice.style.visibility = "visible";
     p1_var = "paper";
+    play_button.style.pointerEvents = "auto";
+    play_button.style.backgroundColor = "#F4A261";
+    
 });
 
 scissors.addEventListener("click", () => {
     p1_choice.src = scissors_pic;
     p1_choice.style.visibility = "visible";
     p1_var = "scissors";
+    play_button.style.pointerEvents = "auto";
+    play_button.style.backgroundColor = "#F4A261";
 });
 
+//Function that will randomize pc's choice
 function pc_pick () {
     let rando = Math.random() * 1000;
     let number = Math.floor(rando); 
@@ -53,6 +65,7 @@ function pc_pick () {
     }
 };
 
+//function name says it all... this declares whether you lost or won.
 function WIN_OR_LOSE () {
 
     if (pc_var === p1_var) {
@@ -97,8 +110,32 @@ function WIN_OR_LOSE () {
     }
 };
 
+//Locks up our play button until the player makes a choice.
+if (p1_var === "") {
+    play_button.style.pointerEvents = "none";
+}
 
+//This will be our score counter function!
+let p1_score_number = 0;
+let pc_score_number = 0;
+
+function score_counter () {
+    if (win_lose.innerHTML == "WIN!") {
+        p1_score_number ++;
+        p1_score.innerHTML = p1_score_number;   
+    }
+    
+    else if (win_lose.innerHTML == "LOSE!") {
+        pc_score_number ++;
+        pc_score.innerHTML = pc_score_number;
+    };
+}
+
+
+//Play button action!
 play_button.addEventListener("click", () => {
     pc_pick();
     WIN_OR_LOSE();
+    guide.innerHTML = "Play or Choose Again!";
+    score_counter();
 });

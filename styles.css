@@ -74,42 +74,48 @@ body .Hero  {
 
 .play_button_sect {
     display: flex;
+    margin-top: 10px;
     flex-direction: column;
     justify-content: space-between;
     height: 25vh;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.WINorLose {
-    font-size: 2rem;
+    width: 15vw;
 }
 
 .win {
     color: #E9C46A;
+    font-size: 2rem;
 }
 
 .lose {
     color: #DD1C1A;
+    font-size: 2rem;
 }
 
 .tie {
     color: #264653;
+    font-size: 2rem;
 }
 
 .button_box {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #play_btn {
     height: 40px;
     width: 60px;
-    background-color: #E9C46A;
+    background-color: #264653;
     border: none;
     font-family: 'Glory', sans-serif;
     font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 12px;
 }
+
 
 #play_btn:hover {
     transform: scale(1.2);
@@ -127,6 +133,7 @@ body .Hero  {
 
 .scoreboard {
     display: flex;
+    align-items: center;
     padding: 20px;
     width: 30vw;
     height: 15vh;
