@@ -175,3 +175,73 @@ body .Hero  {
     text-align: center;
     color: #E9C46A;
 }
+
+@media (max-width: 1370px) {
+    body {
+        font-size: .8rem;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+        margin: 2px 10px;
+    }
+
+    #reload {
+        height: 20px;
+        width: 20px;
+        margin: 12px 0;
+    }
+    
+    .play_button_sect {
+        font-size: .8rem;
+    }
+    .guide {
+        margin: 12px 0;
+    }
+}
+
+@media (max-width: 1000px) {
+.WINorLOSE {
+    margin: 15px 0;
+}
+
+   .play_button_sect {
+       margin-bottom: 10px;
+       width: 50vw;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+   }
+
+    .guide {
+        width: 50vw;
+    }
+
+    .p1_choice_box{
+        justify-content: center;
+    }
+    .pc_choice_box{
+        display: flex;
+        justify-content: center;
+    }
+    .main {
+        align-items: center;
+        margin: 20px 0;
+        height: 50vh;
+        flex-direction: column;
+    }
+    .p1_choice_box {
+        height: 5vh;
+    }
+
+    #play_btn {
+        height: 20px;
+        width: 40px;
+        font-size: .8rem;
+    }
+
+    .scoreboard {
+        width: 50vw;
+    }
+}
