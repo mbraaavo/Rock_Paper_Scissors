@@ -145,7 +145,7 @@ play_button.addEventListener("click", () => {
 console.log(p1_score_number);
 console.log(pc_score_number);
 
-if (pc_score == "3" || p1_score == "3") {
+if (pc_score.innerHTML == "3" || p1_score.innerHTML == "3") {
     if (pc_score_number = "3") {
         announecment.innerHTML = "SORRY!! <br> PC WON..";
     }
