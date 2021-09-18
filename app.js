@@ -14,7 +14,8 @@ let win_lose = document.querySelector('.WINorLOSE');
 let guide = document.querySelector('.guide');
 let p1_score = document.querySelector('#ur_score');
 let pc_score = document.querySelector('#pc_score');
-let announcement = document.querySelector('.announecment');
+let announcement = document.querySelector('.announcement');
+let reload = document.querySelector('#reload');
 
 //This will populate the user's choice and activate the "play" button
 rock.addEventListener("click", () => {
@@ -131,6 +132,37 @@ function score_counter () {
     };
 }
 
+//This will be the winner announcment! I'm doing best out of 5
+
+function winner_announcement() {
+    if (pc_score.innerHTML == "3" || p1_score.innerHTML == "3") {
+        if (pc_score_number == "3") {
+            announcement.innerHTML = "SORRY!! <br> PC WON..";
+            play_button.style.pointerEvents = "none";
+            play_button.style.backgroundColor = "#264653";
+            announcement.style.color = "#DD1C1A";
+            guide.innerHTML = "";
+            rock.style.pointerEvents = "none";
+            paper.style.pointerEvents = "none";
+            scissors.style.pointerEvents = "none";
+            reload.style.display = "block";
+            guide.innerHTML = "Hit the reload to play again!";
+        }
+        else {
+            announcement.innerHTML= "CONGRATS!! <br> YOU WON!!";
+            play_button.style.pointerEvents = "none";
+            play_button.style.backgroundColor = "#264653";
+            announcement.style.color = "#E9C46A";
+            guide.innerHTML = "";
+            rock.style.pointerEvents = "none";
+            paper.style.pointerEvents = "none";
+            scissors.style.pointerEvents = "none";
+            reload.style.display = "block";
+            guide.innerHTML = "Hit the Reload to Play Again!";
+        }
+    };
+    
+}
 
 //Play button action!
 play_button.addEventListener("click", () => {
@@ -138,18 +170,26 @@ play_button.addEventListener("click", () => {
     WIN_OR_LOSE();
     guide.innerHTML = "Play or Choose Again!";
     score_counter();
+    winner_announcement();
 });
 
-//This will be the winner announcment! I'm doing best out of 5
-
-console.log(p1_score_number);
-console.log(pc_score_number);
-
-if (pc_score.innerHTML == "3" || p1_score.innerHTML == "3") {
-    if (pc_score_number = "3") {
-        announecment.innerHTML = "SORRY!! <br> PC WON..";
-    }
-    else {
-        announcement.innerHTML= "CONGRATS!! <br> YOU WON!!";
-    }
-};
+//Reload button action!
+reload.addEventListener("click", () => {
+    pc_score_number = 0;
+    p1_score_number = 0;
+    p1_score.innerHTML = "0";
+    pc_score.innerHTML = "0";
+    guide.innerHTML = "Choose Your Weapon to PLAY";
+    reload.style.display = "none";
+    win_lose.innerHTML = "";
+    announcement.innerHTML = "";
+    p1_choice.src = "";
+    p1_choice.style.visibility = "hidden";
+    p1_var = "";
+    pc_choice.src = "";
+    pc_choice.style.visibility = "hidden";
+    pc_var = "";
+    rock.style.pointerEvents = "auto";
+    paper.style.pointerEvents = "auto";
+    scissors.style.pointerEvents = "auto";
+});

@@ -77,10 +77,24 @@ body .Hero  {
     margin-top: 10px;
     flex-direction: column;
     justify-content: space-between;
-    height: 25vh;
+    height: 30vh;
     align-items: center;
     flex-wrap: wrap;
     width: 17vw;
+}
+.WINorLOSE {
+    margin-bottom: 50px;
+}
+
+#reload {
+    height: 40px;
+    width: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+#reload:hover {
+    transform: scale(1.2);
 }
 
 .win {
@@ -159,4 +173,5 @@ body .Hero  {
 
 .Winner_Announce {
     text-align: center;
+    color: #E9C46A;
 }
