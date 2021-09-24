@@ -176,25 +176,25 @@ body .Hero  {
     color: #E9C46A;
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 1365px) {
     body {
-        font-size: .8rem;
+        font-size: .9rem;
     }
 
     .icon {
-        height: 20px;
-        width: 20px;
-        margin: 2px 10px;
+        height: 30px;
+        width: 30px;
+        margin: 2px 2px;
     }
 
     #reload {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         margin: 12px 0;
     }
     
     .play_button_sect {
-        font-size: .8rem;
+        font-size: .9rem;
     }
     .guide {
         margin: 12px 0;
@@ -207,6 +207,7 @@ body .Hero  {
 }
 
    .play_button_sect {
+       margin-top: 20px;
        margin-bottom: 10px;
        width: 50vw;
        justify-content: center;
@@ -216,6 +217,7 @@ body .Hero  {
 
     .guide {
         width: 50vw;
+        margin: 5px;
     }
 
     .p1_choice_box{
@@ -236,8 +238,8 @@ body .Hero  {
     }
 
     #play_btn {
-        height: 20px;
-        width: 40px;
+        height: 22px;
+        width: 42px;
         font-size: .8rem;
     }
 
